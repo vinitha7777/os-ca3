@@ -5,9 +5,15 @@ def inputs():
         j=str(i+1)
         proc.append('P'+j)
         arr = int(input(f"Arrival Time for process P{i+1} ->"))
-        arr_tim.append(arr)
+        if arr>=0:
+            arr_tim.append(arr)
+        else:
+            print("INVALID INPUT")
         bur = int(input(f"Burst Time for process P{i+1} ->"))
-        bur_tim.append(bur)
+        if arr>=0:
+           bur_tim.append(bur)
+        else:
+            print("INVALID INPUT")
 
 def initt():
     print("Given values are ->\n")
@@ -73,7 +79,7 @@ if __name__=="__main__":
     pr_num = int(input("Give number of processes ->"))
     if pr_num == 0:
         print("No Processes")
-    else:
+    elif pr_num>0:
         proc=[]
         arr_tim=[]
         bur_tim=[]
@@ -89,6 +95,8 @@ if __name__=="__main__":
         #priority = 1 + waiting time / estimated run time
         priority()
         result()
+    else:
+        print("INVALID INPUT")
     print("\n\n")
     print("\t\t\t\t\t\t\t\t\t\tTHANK YOU ")
     input()
