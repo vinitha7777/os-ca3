@@ -6,15 +6,15 @@ def inputs():
         proc.append('P'+j)
         arr = int(input(f"Arrival Time for process P{i+1} ->"))
         if arr>=0:
-            arr_tim.append(arr)
+            bur = int(input(f"Burst Time for process P{i+1} ->"))
+            if bur>=0:
+                arr_tim.append(arr)
+                bur_tim.append(bur)
+            else:
+                print("INVALID INPUT")
         else:
             print("INVALID INPUT")
-        bur = int(input(f"Burst Time for process P{i+1} ->"))
-        if arr>=0:
-           bur_tim.append(bur)
-        else:
-            print("INVALID INPUT")
-
+        
 def initt():
     print("Given values are ->\n")
     print()
