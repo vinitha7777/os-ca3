@@ -1,5 +1,5 @@
 import numpy as np
-def inputs():
+def inputs():#takes inputs
     for i in range(pr_num):
         print()
         j=str(i+1)
@@ -15,7 +15,7 @@ def inputs():
         else:
             print("INVALID INPUT")
         
-def initt():
+def initt():#given table
     print("Given values are ->\n")
     print()
     print("\t\t\t\t\tPROCESS\t\t\t\t\tARRIVAL TIME\t\t\tBURST TIME")
@@ -36,7 +36,7 @@ def exe():
                 arr_tim[j],arr_tim[k] = arr_tim[k],arr_tim[j]
                 proc[j],proc[k] = proc[k],proc[j]
 
-def waitndturn():
+def waitndturn():#wait and turn around time
     val=0
     tem=0
     tuar_final=0
@@ -66,7 +66,7 @@ def priority():
         prioritie.append(x)
         print(f"P{j+1} -> %.3f"%x)
 
-def result():
+def result():#final table
     print("\n\nPROCESS\t\t\t\t\tARRIVAL TIME\t\t\tBURST TIME\t\t\t\tWAITING TIME\t\t\t\tTURN AROUND TIME")
     for i in range(pr_num):
         print()
